@@ -22,7 +22,11 @@ const bots = [
     { token: process.env.TOKEN16, channelId: "1276620113600053248" }  // Room 16
 ];
 
-bots.forEach(bot => {
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+bots.forEach(async (bot, index) => {
+    await delay(index * 5000); // تأخير 5 ثوانٍ بين كل بوت
+
     const client = new Client({
         intents: [
             GatewayIntentBits.Guilds,
