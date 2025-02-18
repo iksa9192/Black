@@ -13,6 +13,6 @@
     "undici": "^7.3.0"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   }
 }
